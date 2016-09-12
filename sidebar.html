@@ -1,9 +1,22 @@
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="main-style.css">
+  <script type="text/javascript">
+    function swap(targetId){
+        if (document.getElementById){
+            target = document.getElementById(targetId);
+                if (target.style.display == "none"){
+                    target.style.display = "";
+                } else{
+                    target.style.display = "none";
+                }
+              
+      }
+    }
+  </script>
 </head>
 <body>
-  <div>
-    <h1><a href ="#">ALICIA IOTT</a></h1>
+  <div class = "links">
       <ul><li>
           <a href="#" onclick="swap('sectionOneLinks');return false;">2016</a>
           <ul id="sectionOneLinks" style="display: none;">
