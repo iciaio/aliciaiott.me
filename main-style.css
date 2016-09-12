@@ -66,7 +66,7 @@ div.main {
 }
 
 img {
-  padding-top: 4.2em;
+  padding-top: 0em;
   float:right;
   height: 500px;
   vertical-align: middle;
@@ -75,27 +75,28 @@ img {
 div.images {
   width: 40%;
   float: left;
-  padding-top: 3em;
-  padding-bottom: 7em;
+  padding-top: 0em;
+  padding-bottom: 0em;
 }
 
 div.descrip {
   float:left;
-    height:39.5em;
-    width:30%;
-    position:relative;
+  height: 500px;
+  width:30%;
+  position:relative;
 }
 
 div.imagedes {
-  overflow: scroll;
+  overflow: hidden;
   padding-left: 2em;
-    position:absolute;
-    bottom:0;
+  position:absolute;
+  bottom: 0;
 }
 
 div.buttons {
   padding-left: 1.5em;
-  padding-top: 6.3em;
+  padding-top: 0em;
+  width: 400px;
   outline: 0;
 }
 
@@ -113,4 +114,13 @@ p.about {
   padding-right: 3em;
   vertical-align: baseline;
   bottom: 0;
+}
+
+p.wi {
+  padding-top: 0.5em;
+  padding-right: 1em;
+  float: left;
+  font-size: .8em;
+  padding-left: .5em;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
