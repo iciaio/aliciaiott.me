@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <style>
+      a:link {
+        color: #000000;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: #000000;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #000000;
+        text-decoration: none;
+      }
+
+      a:active {
+        color: #000000;
+        text-decoration: none;
+      }
+
+      ul {
+        list-style-type: none;
+        font-size: .8em;
+        padding-left: 2.6em;
+      }
+
+      li {
+        padding: .6em;
+      }
+
+      a {
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+      }
+
+      a.ume{
+        text-decoration: underline;
+      }
+
+      h1 {
+        width: 12em;
+        font-style: italic;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        padding-left: 1.3em;
+      }
+
+      div.links {
+        height: 100%;
+        width: 20%;
+        float: left;
+        padding: 2em;
+      }
+
+      div.main {
+        width: 60%;
+        float: left;
+        padding-top: 4.7em;
+      }
+
+      img {
+        padding-top: 4.2em;
+        float:right;
+        height: 500px;
+        vertical-align: middle;
+      }
+
+      div.images {
+        width: 30%;
+        float: left;
+        padding-top: 3em;
+        padding-bottom: 7em;
+      }
+
+      div.descrip {
+        float:left;
+          height:39.5em;
+          width:40%;
+          position:relative;
+      }
+
+      div.imagedes {
+        padding-left: 2em;
+          position:absolute;
+          bottom:0;
+      }
+
+      div.buttons {
+        padding-left: 1.5em;
+        padding-top: 6.3em;
+        outline: 0;
+      }
+
+      button {
+        font-size: 2em;
+        background-color: transparent;
+        border:none;
+      }
+
+      p.about {
+        font-family: "Courier New", Courier, monospace;
+        font-size: .75em;
+        line-height: 2em;
+        text-align: left;
+        padding-right: 3em;
+        vertical-align: baseline;
+        bottom: 0;
+      }
+
+      p.wi {
+        padding-top: 0.5em;
+        padding-right: 1em;
+        float: left;
+        font-size: .8em;
+        padding-left: .5em;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+      }
+
+    </style>
+    
+    
+    <script type="text/javascript">
+      function swap(targetId){
+          if (document.getElementById){
+              target = document.getElementById(targetId);
+                  if (target.style.display == "none"){
+                      target.style.display = "";
+                  } else{
+                      target.style.display = "none";
+                  }
+                
+        }
+      }
+    </script>
+    
+    
+    <title>Audionce</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script language="javascript">
+      function goNext(){
+        var l1 = "http://i.imgur.com/FcH0DL4.jpg";
+        var l2 = "http://i.imgur.com/ASTOvF5.jpg";
+        var l3 = "http://i.imgur.com/jsUNDJi.jpg";
+        var l4 = "http://i.imgur.com/Ougy3GM.jpg";
+        var l5 = "http://i.imgur.com/Lkpcqjg.jpg";
+        var l6 = "http://i.imgur.com/gnoCM3f.jpg";
+        var l7 = "http://i.imgur.com/TqqbllB.jpg";
+        var l8 = "http://i.imgur.com/F7M7lEQ.jpg";
+        if(document.getElementById("clickImage").src == l1){
+          document.getElementById("whichImage").innerHTML = "2 / 8";
+          document.getElementById("clickImage").src = l2;
+        } else if (document.getElementById("clickImage").src == l2) {
+          document.getElementById("whichImage").innerHTML = "3 / 8";
+          document.getElementById("clickImage").src = l3;
+        } else if (document.getElementById("clickImage").src == l3) {
+          document.getElementById("whichImage").innerHTML = "4 / 8";
+          document.getElementById("clickImage").src = l4;
+        } else if (document.getElementById("clickImage").src == l4) {
+          document.getElementById("whichImage").innerHTML = "5 / 8";
+          document.getElementById("clickImage").src = l5;
+        } else if (document.getElementById("clickImage").src == l5) {
+          document.getElementById("whichImage").innerHTML = "6 / 8";
+          document.getElementById("clickImage").src = l6;
+        } else if (document.getElementById("clickImage").src == l6) {
+          document.getElementById("whichImage").innerHTML = "7 / 8";
+          document.getElementById("clickImage").src = l7;
+        } else if (document.getElementById("clickImage").src == l7) {
+          document.getElementById("whichImage").innerHTML = "8 / 8";
+          document.getElementById("clickImage").src = l8;
+        } else if (document.getElementById("clickImage").src == l8) {
+          document.getElementById("whichImage").innerHTML = "1 / 8";
+          document.getElementById("clickImage").src = l1;
+        } 
+      }
+
+      function goBack(){
+        var l1 = "http://i.imgur.com/FcH0DL4.jpg";
+        var l2 = "http://i.imgur.com/ASTOvF5.jpg";
+        var l3 = "http://i.imgur.com/jsUNDJi.jpg";
+        var l4 = "http://i.imgur.com/Ougy3GM.jpg";
+        var l5 = "http://i.imgur.com/Lkpcqjg.jpg";
+        var l6 = "http://i.imgur.com/gnoCM3f.jpg";
+        var l7 = "http://i.imgur.com/TqqbllB.jpg";
+        var l8 = "http://i.imgur.com/F7M7lEQ.jpg";
+        if (document.getElementById("clickImage").src == l1) {
+          document.getElementById("whichImage").innerHTML = "8 / 8";
+          document.getElementById("clickImage").src = l8;
+        } else if (document.getElementById("clickImage").src == l8) {
+          document.getElementById("whichImage").innerHTML = "7 / 8";
+          document.getElementById("clickImage").src = l7;
+        } else if (document.getElementById("clickImage").src == l7) {
+          document.getElementById("whichImage").innerHTML = "6 / 8";
+          document.getElementById("clickImage").src = l6;
+        } else if (document.getElementById("clickImage").src == l6) {
+          document.getElementById("whichImage").innerHTML = "5 / 8";
+          document.getElementById("clickImage").src = l5;
+        } else if (document.getElementById("clickImage").src == l5) {
+          document.getElementById("whichImage").innerHTML = "4 / 8";
+          document.getElementById("clickImage").src = l4;
+        } else if (document.getElementById("clickImage").src == l4) {
+          document.getElementById("whichImage").innerHTML = "3 / 8";
+          document.getElementById("clickImage").src = l3;
+        } else if (document.getElementById("clickImage").src == l3) {
+          document.getElementById("whichImage").innerHTML = "2 / 8";
+          document.getElementById("clickImage").src = l2;
+        } else if (document.getElementById("clickImage").src == l2) {
+          document.getElementById("whichImage").innerHTML = "1 / 8";
+          document.getElementById("clickImage").src = l1;
+        }
+      }
+
+      function fadeNext(){
+        $("#clickImage").fadeOut(700,function(){goNext()});
+        $("#clickImage").fadeIn(700)
+      }
+
+      function fadeBack(){
+        $("#clickImage").fadeOut(700,function(){goBack()});
+        $("#clickImage").fadeIn(700)
+  
+      }
+
+
+    </script>
+  </head>
+
+  <body>
+    <div id="sidebar">
+      <iframe width="170" height="100%" src="sidebar.html" float="left" padding="2em"></iframe>
+    </div>  
+    <div class="images">
+      <img src="http://i.imgur.com/FcH0DL4.jpg" alt="" id="clickImage">
+    </div>
+    
+
+    <div class="descrip">
+      <div class="buttons">
+      <button type="button" onclick="fadeBack()"> < </button>
+      <p id="whichImage" class="wi">1 / 8</p>
+      <button type="button" onclick="fadeNext()"> > </button>
+      </div>
+      <div class="imagedes">
+        <p class = "about">
+        <i>Audionce, 2015</i><br>
+        </p>
+
+        <p class = "about">Audionce is an iOS application designed to allow users to record and place sounds at a geolocation. Once a sound is submitted, other app users within a close range of the submit location can hear the sound.</p>
+
+        <p class = "about">This app was intended to imitate the core aspects of graffiti, but with sounds instead of visual art. Newer sounds will overwrite old sounds if dropped in the same location. This project was collaborative as I worked with another developer who created an android version.”
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
