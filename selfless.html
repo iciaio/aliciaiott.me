@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="main-style.css">
+    <meta charset="utf-8">
+    <title>Selfless</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="change-image.js"></script>
+    <script language="javascript">
+      var l1 = "http://i.imgur.com/2SpnhB8.jpg";
+      var l2 = "http://i.imgur.com/TJJHbWQ.jpg";
+
+      var imageList = [l1, l2];
+      var imageCounter = document.getElementById("whichImage");
+      
+      function fadeNext(){
+        $("#clickImage").fadeOut(700,function(){goNext(imageList, document.getElementById("clickImage"), whichImage)});
+        $("#clickImage").fadeIn(700)
+      }
+
+      function fadeBack(){
+        $("#clickImage").fadeOut(700,function(){goBack(imageList, document.getElementById("clickImage"), whichImage)});
+        $("#clickImage").fadeIn(700)
+      }
+    </script>
+
+</head>
+
+  <body>
+    
+    <div>    
+      <h1><a href ="aliciaiott.me">ALICIA IOTT</a></h1>
+      <iframe src="sidebar.html" seamless="seamless" scrolling="no"></iframe>
+    </div>  
+
+    <div class="images">
+      <img src="http://i.imgur.com/2SpnhB8.jpg" alt="" id="clickImage" onclick="changeImage()">
+    </div>  
+
+    <div class="descrip">
+      <div class="buttons">
+      <button type="button" onclick="fadeBack()"> < </button>
+      <p id="whichImage" class="wi">1 / 2</p>
+      <button type="button" onclick="fadeNext()"> > </button>
+      </div>
+      <div class="imagedes">
+        <p class = "about">
+          <i>2014</i></p>
+
+          <p class = "about">Selfless was an installation piece created after much research on the ability of humans to self identify. This is a trait that separates us from any other animal. Not even primates can reliably recognize themselves in mirrors. I was fascinated by the evolutionary purpose behind knowing what we look like.</p>
+          
+          <p class = "about">Humans intuitively expect to see their reflection in a mirror; when viewing this piece they cannot see their reflection rendering them selfless if only for an instant.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

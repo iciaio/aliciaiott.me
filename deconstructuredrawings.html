@@ -1,0 +1,55 @@
+<html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="main-style.css">
+  <title>Deconstructure</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="change-image.js"></script>
+    <script language="javascript">
+      
+      var l0 = "http://i.imgur.com/Rlrubb9.jpg";
+      var l1 = "http://i.imgur.com/ykMtoKu.jpg";
+      var l2 = "http://i.imgur.com/Kp6NRD4.jpg";
+      var l3 = "http://i.imgur.com/WW2t6xI.jpg";
+      var l4 = "http://i.imgur.com/fbeuQqb.jpg";
+      var l5 = "http://i.imgur.com/BnbTkpq.jpg";
+    
+      var imageList = [l0, l1, l2, l3, l4, l5];
+      var imageCounter = document.getElementById("whichImage");
+        
+      function fadeNext(){
+        $("#clickImage").fadeOut(700,function(){goNext(imageList, document.getElementById("clickImage"), whichImage)});
+        $("#clickImage").fadeIn(700)
+      }
+
+      function fadeBack(){
+        $("#clickImage").fadeOut(700,function(){goBack(imageList, document.getElementById("clickImage"), whichImage)});
+        $("#clickImage").fadeIn(700)
+      }
+    </script>
+  </head>
+
+  <body>
+    <div>    
+      <h1><a href ="aliciaiott.me">ALICIA IOTT</a></h1>
+      <iframe src="sidebar.html" seamless="seamless" scrolling="no"></iframe>
+    </div>  
+    <div class="images">
+      <img src="http://i.imgur.com/Rlrubb9.jpg" alt="" id="clickImage">
+    </div>  
+
+    <div class="descrip">
+      <div class="buttons">
+      <button type="button" onclick="fadeBack()"> < </button>
+      <p id="whichImage" class="wi">1 / 6</p>
+      <button type="button" onclick="fadeNext()"> > </button>
+      </div>
+      <div class="imagedes">
+        <p class = "about">
+          <i>2015</i></p>
+
+<p class = "about">These drawings attempt to contrast the idilic straight lines of architecture with more organic forms. I often contemplated loss and lust while making these drawings.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

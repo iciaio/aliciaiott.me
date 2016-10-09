@@ -1,21 +1,18 @@
+
 <html>
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="main-style.css">
-    <title>Audionce</title>
+    <title>Paintings</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="change-image.js"></script>
     <script language="javascript">
-      var l1 = "http://i.imgur.com/FcH0DL4.jpg";
-      var l2 = "http://i.imgur.com/ASTOvF5.jpg";
-      var l3 = "http://i.imgur.com/jsUNDJi.jpg";
-      var l4 = "http://i.imgur.com/Ougy3GM.jpg";
-      var l5 = "http://i.imgur.com/Lkpcqjg.jpg";
-      var l6 = "http://i.imgur.com/gnoCM3f.jpg";
-      var l7 = "http://i.imgur.com/TqqbllB.jpg";
-      var l8 = "http://i.imgur.com/F7M7lEQ.jpg";
-
-      var imageList = [l1, l2, l3, l4, l5, l6, l7, l8];
+      var l1 = "http://i.imgur.com/TxVlCAV.jpg?1";
+      var l2 = "http://i.imgur.com/tQOa5KX.jpg?1";
+      var l3 = "http://i.imgur.com/iS8Tfla.jpg?1";
+      var l4 = "http://i.imgur.com/ZCgZKR5.jpg?1";
+        
+      var imageList = [l1, l2, l3, l4];
       var imageCounter = document.getElementById("whichImage");
       
       function fadeNext(){
@@ -32,35 +29,43 @@
   </head>
 
   <body>
+
     <div>    
       <h1><a href ="aliciaiott.me">ALICIA IOTT</a></h1>
       <iframe src="sidebar.html" seamless="seamless" scrolling="no"></iframe>
     </div>  
 
     <div class="images">
-      <img src="http://i.imgur.com/FcH0DL4.jpg" alt="" id="clickImage">
-    </div>
-    
+      <img src="http://i.imgur.com/TxVlCAV.jpg?1" alt="" id="clickImage" onclick="changeImage()">
+    </div>  
 
     <div class="descrip">
       <div class="buttons">
       <button type="button" onclick="fadeBack()"> < </button>
-      <p id="whichImage" class="wi">1 / 8</p>
+      <p id="whichImage" class="wi">1 / 4</p>
       <button type="button" onclick="fadeNext()"> > </button>
       </div>
       <div class="imagedes">
         <p class = "about">
-        <i>Audionce, 2015</i><br>
-        </p>
-
-        <p class = "about">Audionce is an iOS application designed to allow users to record and place sounds at a geolocation. Once a sound is submitted, other app users within a close range of the submit location can hear the sound.</p>
-
-        <p class = "about">This app was intended to imitate the core aspects of graffiti, but with sounds instead of visual art. Newer sounds will overwrite old sounds if dropped in the same location. This project was collaborative as I worked with another developer who created an android version.”
+          <i>2014</i></p>
+          <p class = "about">This is a collection of oil paintings. Although not necessarily a series, these paintings were all intended to imitate reality and simultaneously draw attention to the absurdities of reality.</p>
+          <p class = "about">The fourth painting is a self portrait drawn from a photograph manipulated with filters.
         </p>
       </div>
     </div>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

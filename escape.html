@@ -1,0 +1,63 @@
+<html>
+  <head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="main-style.css">    <title>Escape</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="change-image.js"></script>
+    <script language="javascript">
+      var l1 = "https://38.media.tumblr.com/c68fa2b3727e06d170a27b42bca50e21/tumblr_ngwnl7L0ed1sgednoo1_1280.jpg";
+      var l2 = "https://33.media.tumblr.com/a66bb9ecbd2b077dbd490f9e54b90b7b/tumblr_ngwnl7L0ed1sgednoo3_1280.jpg";
+      var l3 = "https://38.media.tumblr.com/a3bb7a1c8a3a05a02e11bfd38c3aed7e/tumblr_ngwnl7L0ed1sgednoo4_1280.jpg";
+      var l4 = "https://33.media.tumblr.com/9ce1eb85ba61cb4ee0ed2bf54932a268/tumblr_ngwnl7L0ed1sgednoo2_1280.jpg";
+
+      var imageList = [l1, l2, l3, l4];
+      var imageCounter = document.getElementById("whichImage");
+        
+      function fadeNext(){
+        $("#clickImage").fadeOut(700,function(){goNext(imageList, document.getElementById("clickImage"), whichImage)});
+        $("#clickImage").fadeIn(700)
+      }
+
+      function fadeBack(){
+        $("#clickImage").fadeOut(700,function(){goBack(imageList, document.getElementById("clickImage"), whichImage)});
+        $("#clickImage").fadeIn(700)
+      }
+    </script>
+</head>
+
+  <body>
+    <div>    
+      <h1><a href ="aliciaiott.me">ALICIA IOTT</a></h1>
+      <iframe src="sidebar.html" seamless="seamless" scrolling="no"></iframe>
+    </div>
+
+    <div class="images">
+      <embed src="https://www.youtube.com/embed/ZUmxFUHIuyI" frameborder="0" width="500" height="400" allowfullscreen>
+    </div>  
+
+    <div class="descrip">
+      <div class="imagedes">
+        <p class = "about">
+          <i>2016</i> Escape (Infinite Room Game)
+        </p>
+        <p class = "about">
+        A work in progress. This game was meant to be a simple tongue in cheek metaphor for the banality of everyday life. A player will walk through the same house multiple times. (Each door will only lead to a slighty different version of the same house.) The goal is to escape and the player will find hallucinogenics once they have completed all the mundane puzzles (finding keys/ opening locks/ reading letters...).
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

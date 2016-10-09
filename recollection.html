@@ -1,0 +1,56 @@
+<html>
+  <head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="main-style.css">
+    <title>Recollection</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="change-image.js"></script>
+    <script language="javascript">
+      var l0 = "http://i.imgur.com/vuACvMA.jpg";
+      var l1 = "http://i.imgur.com/SPohvMA.jpg";
+      var l2 = "http://i.imgur.com/kPHrHjI.jpg";
+      var l3 = "http://i.imgur.com/CR9Kk1c.jpg";
+      var l4 = "http://i.imgur.com/ekVcFMt.jpg";
+      var l5 = "http://i.imgur.com/EwzxcPK.jpg";
+      var l6 = "http://i.imgur.com/p9DX2Kk.jpg";
+      
+      var imageList = [l0, l1, l2, l3, l4, l5, l6];
+      var imageCounter = document.getElementById("whichImage");
+        
+      function fadeNext(){
+        $("#clickImage").fadeOut(700,function(){goNext(imageList, document.getElementById("clickImage"), whichImage)});
+        $("#clickImage").fadeIn(700)
+      }
+
+      function fadeBack(){
+        $("#clickImage").fadeOut(700,function(){goBack(imageList, document.getElementById("clickImage"), whichImage)});
+        $("#clickImage").fadeIn(700)
+      }
+    </script>
+  </head>
+
+  <body>
+    <div>    
+      <h1><a href ="aliciaiott.me">ALICIA IOTT</a></h1>
+      <iframe src="sidebar.html" seamless="seamless" scrolling="no"></iframe>
+    </div>  
+    <div class="images">
+      <img src="http://i.imgur.com/vuACvMA.jpg" alt="" id="clickImage">
+    </div>  
+
+    <div class="descrip">
+      <div class="buttons">
+      <button type="button" onclick="fadeBack()"> < </button>
+      <p id="whichImage" class="wi">1 / 7</p>
+      <button type="button" onclick="fadeNext()"> > </button>
+      </div>
+      <div class="imagedes">
+        <p class = "about">
+          <i>2015</i> Recollection</p> 
+
+<p class = "about">Everytime a memory is recalled, it is changed. In an attempt to preserve childhood memories, I depicted special places from my early years in these drawings. I paid special attention to details like paint and cloth texture, emphasized things I paid most attention to then, and ignored proportion and perspective. (Graphite, white acrylic paint, hair, photographs, magazine, yarn, glitter.)
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
