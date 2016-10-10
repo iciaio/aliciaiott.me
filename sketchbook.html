@@ -35,32 +35,53 @@
         $("#clickImage").fadeOut(700,function(){goBack(imageList, document.getElementById("clickImage"), whichImage)});
         $("#clickImage").fadeIn(700)
       }
+
+      function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
+        var ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
+        return { width: srcWidth*ratio, height: srcHeight*ratio };
+      }
+
+      window.onload = function(){
+        var maxwid = 100;
+        var curr_img = new Image();
+        for (var i=0; i<imageList.length; i++){
+          curr_img.src = imageList[i];
+          var rat = calculateAspectRatioFit(curr_img.width, curr_img.height, 2000, 500);
+          if (curr_img.width > maxwid){
+            maxwid = rat.width;
+          }
+        }
+        var imgdiv = document.getElementById("image_div");
+        imgdiv.style.width = (maxwid+"px");
+      }
   </script>
 
   </head>
 
   <body>
-    <div>    
-      <h1><a href ="/">ALICIA IOTT</a></h1>
-      <iframe src="sidebar.html" seamless="seamless" scrolling="no"></iframe>
-    </div>  
+    <div class="content">
+      <div>    
+        <h1><a href ="/">ALICIA IOTT</a></h1>
+        <iframe src="sidebar.html" seamless="seamless" scrolling="no"></iframe>
+      </div>  
 
-    <div class="images">
-      <img alt="" id="clickImage" src="http://i.imgur.com/Bllj1SO.jpg">
-    </div>
-
-    <div class="descrip">
-      <div class="buttons">
-      <button type="button" onclick="fadeBack()"> < </button>
-      <p id="whichImage" class="wi">1 / 14</p>
-      <button type="button" onclick="fadeNext()"> > </button>
+      <div class="images" id="image_div">
+        <img alt="" id="clickImage" src="http://i.imgur.com/Bllj1SO.jpg">
       </div>
-      <div class="imagedes">
-        <p class = "about">
-          <em>2013-2014</em><br>
-        </p>
-          <p class="about">Here are the most notable and recent excerpts from my sketchbooks. I mainly used my sketchbooks to doodle, work out ideas, take notes, and study objects for larger works.</p>
-        </p>
+
+      <div class="descrip">
+        <div class="buttons">
+        <button type="button" onclick="fadeBack()"> < </button>
+        <p id="whichImage" class="wi">1 / 14</p>
+        <button type="button" onclick="fadeNext()"> > </button>
+        </div>
+        <div class="imagedes">
+          <p class = "about">
+            <em>2013-2014</em><br>
+          </p>
+            <p class="about">Here are the most notable and recent excerpts from my sketchbooks. I mainly used my sketchbooks to doodle, work out ideas, take notes, and study objects for larger works.</p>
+          </p>
+        </div>
       </div>
     </div>
   </body>

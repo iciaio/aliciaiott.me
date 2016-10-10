@@ -29,28 +29,52 @@
         $("#clickImage").fadeOut(700,function(){goBack(imageList, document.getElementById("clickImage"), whichImage)});
         $("#clickImage").fadeIn(700)
       }
+      
+      function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
+        var ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
+        return { width: srcWidth*ratio, height: srcHeight*ratio };
+      }
 
+      window.onload = function(){
+        var maxwid = 100;
+        var curr_img = new Image();
+        for (var i=0; i<imageList.length; i++){
+          curr_img.src = imageList[i];
+          var rat = calculateAspectRatioFit(curr_img.width, curr_img.height, 2000, 500);
+          if (curr_img.width > maxwid){
+            maxwid = rat.width;
+          }
+        }
+        var imgdiv = document.getElementById("image_div");
+        imgdiv.style.width = (maxwid+"px");
+      }
+      
     </script>
 
   </head>
-    <body>
+  <body>
+    <div class="content">
       <div>    
         <h1><a href ="/">ALICIA IOTT</a></h1>
         <iframe src="sidebar.html" seamless="seamless" scrolling="no"></iframe>
       </div> 
 
-      <div class="images">
+      <div class="images" id="image_div">
         <img src="http://i.imgur.com/GXbPQBN.jpg" alt="" id="clickImage">
       </div>  
 
-    <div class="descrip">
-      <div class="buttons">
-        <button type="button" onclick="fadeBack()"> < </button>
-        <p id="whichImage" class="wi">1 / 10</p>
-        <button type="button" onclick="fadeNext()"> > </button>
+      <div class="descrip">
+        <div class="buttons">
+          <button type="button" onclick="fadeBack()"> < </button>
+          <p id="whichImage" class="wi">1 / 10</p>
+          <button type="button" onclick="fadeNext()"> > </button>
+        </div>
+        <div class="imagedes">
+          <p class="about"><em>2014-2015</em> Exoskeleton</p>
+          <p class="about">Lunar Gala is an annual fashion show at Carnegie Mellon University organized by students and sponsored by companies around the United States.</p>
+          <p class="about">This is a collaborative project with a partner to create four outfits. My partner and I strove to emulate the exoskeletons of prehistoric creatures, mollusks, and insects when choosing our colors and materials. We used boning, knit fabrics, and foam core. The name of our line is &ldquo;Exoskeleton.&rdquo;</p>
+        </div>
       </div>
-      <div class="imagedes">
-        <p class="about"><em>2014-2015</em> Exoskeleton</p>
-        <p class="about">Lunar Gala is an annual fashion show at Carnegie Mellon University organized by students and sponsored by companies around the United States.</p>
-        <p class="about">This is a collaborative project with a partner to create four outfits. My partner and I strove to emulate the exoskeletons of prehistoric creatures, mollusks, and insects when choosing our colors and materials. We used boning, knit fabrics, and foam core. The name of our line is &ldquo;Exoskeleton.&rdquo;</p>
     </div>
+  </body>
+</html>

@@ -23,36 +23,57 @@
         $("#clickImage").fadeOut(700,function(){goBack(imageList, document.getElementById("clickImage"), whichImage)});
         $("#clickImage").fadeIn(700)
       }
+      
+      function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
+        var ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
+        return { width: srcWidth*ratio, height: srcHeight*ratio };
+      }
+
+      window.onload = function(){
+        var maxwid = 100;
+        var curr_img = new Image();
+        for (var i=0; i<imageList.length; i++){
+          curr_img.src = imageList[i];
+          var rat = calculateAspectRatioFit(curr_img.width, curr_img.height, 10000, 500);
+          if (curr_img.width > maxwid){
+            maxwid = rat.width;
+          }
+        }
+        var imgdiv = document.getElementById("image_div");
+        imgdiv.style.width = (maxwid+"px");
+      }
 
   </script>
   </head>
 
   <body>
-    <div>    
-      <h1><a href ="/">ALICIA IOTT</a></h1>
-      <iframe src="sidebar.html" seamless="seamless" scrolling="no"></iframe>
-    </div>  
+    <div class="content">
+      <div>    
+        <h1><a href ="/">ALICIA IOTT</a></h1>
+        <iframe src="sidebar.html" seamless="seamless" scrolling="no"></iframe>
+      </div>  
 
-    <div class="images">
-      <img src="http://imgur.com/yKJERoX.jpg" alt="" id="clickImage">
-    </div>
-    
-
-    <div class="descrip">
-      <div class="buttons">
-      <button type="button" onclick="fadeBack()"> < </button>
-      <p id="whichImage" class="wi">1 / 4</p>
-      <button type="button" onclick="fadeNext()"> > </button>
+      <div class="images" id="image_div">
+        <img src="http://imgur.com/yKJERoX.jpg" alt="" id="clickImage">
       </div>
-      <div class="imagedes">
-        <p class = "about">
-        <i>The Girls Are Home, 2016</i><br>
-        </p>
+      
 
-        <p class = "about">(A collaboration with Char Stiles) For me, this started with a keen interest in the relationship between my fading, fallible memories and a medium that boasts an ability to capture "reality". I modeled the house from memory of my childhood home and we inserted steroscopic footage behind the windows so that a viewer could peek into our daily lives. The footage is a mundane represenation of domestic life shot in our own home. As a form of non-linear, immersive storytelling I wanted to place the viewer into the story and give them a role (as a giant, voyeuristic intruder).</p>
+      <div class="descrip">
+        <div class="buttons">
+        <button type="button" onclick="fadeBack()"> < </button>
+        <p id="whichImage" class="wi">1 / 4</p>
+        <button type="button" onclick="fadeNext()"> > </button>
+        </div>
+        <div class="imagedes">
+          <p class = "about">
+          <i>The Girls Are Home, 2016</i><br>
+          </p>
 
-        <p class = "about"> This piece was exhibited at <a href="http://artandcode.com/weirdreality/">WEIRD REALITY</a> (an Art and Code symposium) at Carnegie Mellon University.
-        </p>
+          <p class = "about">(A collaboration with Char Stiles) For me, this started with a keen interest in the relationship between my fading, fallible memories and a medium that boasts an ability to capture "reality". I modeled the house from memory of my childhood home and we inserted steroscopic footage behind the windows so that a viewer could peek into our daily lives. The footage is a mundane represenation of domestic life shot in our own home. As a form of non-linear, immersive storytelling I wanted to place the viewer into the story and give them a role (as a giant, voyeuristic intruder).</p>
+
+          <p class = "about"> This piece was exhibited at <a href="http://artandcode.com/weirdreality/">WEIRD REALITY</a> (an Art and Code symposium) at Carnegie Mellon University.
+          </p>
+        </div>
       </div>
     </div>
   </body>

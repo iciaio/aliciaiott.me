@@ -27,31 +27,52 @@
         $("#clickImage").fadeOut(700,function(){goBack(imageList, document.getElementById("clickImage"), whichImage)});
         $("#clickImage").fadeIn(700)
       }
+
+      function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
+        var ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
+        return { width: srcWidth*ratio, height: srcHeight*ratio };
+      }
+
+      window.onload = function(){
+        var maxwid = 100;
+        var curr_img = new Image();
+        for (var i=0; i<imageList.length; i++){
+          curr_img.src = imageList[i];
+          var rat = calculateAspectRatioFit(curr_img.width, curr_img.height, 10000, 500);
+          if (curr_img.width > maxwid){
+            maxwid = rat.width;
+          }
+        }
+        var imgdiv = document.getElementById("image_div");
+        imgdiv.style.width = (maxwid+"px");
+      }
       
     </script>
   </head>
 
   <body>
-    <div>    
-      <h1><a href ="/">ALICIA IOTT</a></h1>
-      <iframe src="sidebar.html" seamless="seamless" scrolling="no"></iframe>
-    </div>  
-    <div class="images">
-      <img src="http://i.imgur.com/w8wRoEg.jpg" alt="" id="clickImage">
-    </div>  
+    <div class="content">
+      <div>    
+        <h1><a href ="/">ALICIA IOTT</a></h1>
+        <iframe src="sidebar.html" seamless="seamless" scrolling="no"></iframe>
+      </div>  
+      <div class="images" id="image_div">
+        <img src="http://i.imgur.com/w8wRoEg.jpg" alt="" id="clickImage">
+      </div>  
 
-    <div class="descrip">
-      <div class="buttons">
-      <button type="button" onclick="fadeBack()"> < </button>
-      <p id="whichImage" class="wi">1 / 7</p>
-      <button type="button" onclick="fadeNext()"> > </button>
-      </div>
-      <div class="imagedes">
-        <p class = "about">
-          <i>2015</i></p>
-
-<p class = "about">Here are several interesting and fun studies of the human form. Ink and paper.
-        </p>
+      <div class="descrip">
+        <div class="buttons">
+        <button type="button" onclick="fadeBack()"> < </button>
+        <p id="whichImage" class="wi">1 / 7</p>
+        <button type="button" onclick="fadeNext()"> > </button>
+        </div>
+        <div class="imagedes">
+          <p class = "about">
+            <i>2015</i>
+          </p>
+          <p class = "about">Here are several interesting and fun studies of the human form. Ink and paper.
+          </p>
+        </div>
       </div>
     </div>
   </body>

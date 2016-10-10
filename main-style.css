@@ -46,18 +46,11 @@ h1 {
 
 iframe {
   border:0;
-  height: 1000px;
-  width: 20%;
+  height: 700px;
+  width: 300px;
   float: left;
   padding-left: 2em;
 }
-/*
-div.links {
-  height: 100%;
-  width: 20%;
-  float: left;
-  padding: 2em;
-}*/
 
 div.main {
   width: 50%;
@@ -72,17 +65,24 @@ img {
   vertical-align: middle;
 }
 
+div.content{
+  float:left;
+  width:1700px;
+  height:550px;
+}
+
 div.images {
-  width: 40%;
+/*  width: 40%; */
   float: left;
   padding-top: 0em;
   padding-bottom: 0em;
 }
 
 div.descrip {
+  display:inline;
   float:left;
   height: 500px;
-  width:30%;
+  width:500px;
   position:relative;
 }
 

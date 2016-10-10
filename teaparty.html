@@ -22,30 +22,50 @@
         $("#clickImage").fadeOut(700,function(){goBack(imageList, document.getElementById("clickImage"), whichImage)});
         $("#clickImage").fadeIn(700)
       }
+
+      function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
+        var ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
+        return { width: srcWidth*ratio, height: srcHeight*ratio };
+      }
+
+      window.onload = function(){
+        var maxwid = 100;
+        var curr_img = new Image();
+        for (var i=0; i<imageList.length; i++){
+          curr_img.src = imageList[i];
+          var rat = calculateAspectRatioFit(curr_img.width, curr_img.height, 2000, 500);
+          if (curr_img.width > maxwid){
+            maxwid = rat.width;
+          }
+        }
+        var imgdiv = document.getElementById("image_div");
+        imgdiv.style.width = (maxwid+"px");
+      }
     </script>
+  </head>
+  <body>
+    <div class="content">
+      <div>    
+        <h1><a href ="/">ALICIA IOTT</a></h1>
+        <iframe src="sidebar.html" seamless="seamless" scrolling="no"></iframe>
+      </div>  
 
-    </head>
-    <body>
-       <div>    
-      <h1><a href ="/">ALICIA IOTT</a></h1>
-      <iframe src="sidebar.html" seamless="seamless" scrolling="no"></iframe>
-    </div>  
+      <div class="images">
+        <img src="http://i.imgur.com/oj3mfac.jpg" alt="" id="clickImage">
+      </div>  
 
-    <div class="images">
-      <img src="http://i.imgur.com/oj3mfac.jpg" alt="" id="clickImage">
-    </div>  
-
-    <div class="descrip">
-      <div class="buttons">
-      <button type="button" onclick="fadeBack()"> < </button>
-      <p id="whichImage" class="wi">1 / 3</p>
-      <button type="button" onclick="fadeNext()"> > </button>
-      </div>
-      <div class="imagedes">
-        <p class = "about"><i>2014</i></p>
-        <p class = "about">
-          This was a series of small ink drawings on 42 used tea bags. Every mouth is modeled after my own in a different position. When making this piece I focused on an individual’s experience through time but upon installation it becomes more of a cinematic scene.
-        </p>
+      <div class="descrip">
+        <div class="buttons">
+          <button type="button" onclick="fadeBack()"> < </button>
+          <p id="whichImage" class="wi">1 / 3</p>
+          <button type="button" onclick="fadeNext()"> > </button>
+        </div>
+        <div class="imagedes">
+          <p class = "about"><i>2014</i></p>
+          <p class = "about">
+            This was a series of small ink drawings on 42 used tea bags. Every mouth is modeled after my own in a different position. When making this piece I focused on an individual’s experience through time but upon installation it becomes more of a cinematic scene.
+          </p>
+        </div>
       </div>
     </div>
   </body>
