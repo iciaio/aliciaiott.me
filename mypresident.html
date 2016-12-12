@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="main-style.css">
+    <title>My President</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="change-image.js"></script>
+    <script language="javascript">
+      var l1 = "http://i.imgur.com/i2AL3Wv.png";
+      var l2 = "http://i.imgur.com/b006oWu.png";
+
+      var imageList = [l1, l2];
+      var imageCounter = document.getElementById("whichImage");
+      
+      function fadeNext(){
+        $("#clickImage").fadeOut(700,function(){goNext(imageList, document.getElementById("clickImage"), whichImage)});
+        $("#clickImage").fadeIn(700)
+      }
+
+      function fadeBack(){
+        $("#clickImage").fadeOut(700,function(){goBack(imageList, document.getElementById("clickImage"), whichImage)});
+        $("#clickImage").fadeIn(700)
+      }
+      
+      function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
+        var ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
+        return { width: srcWidth*ratio, height: srcHeight*ratio };
+      }
+
+      window.onload = function(){
+        var maxwid = 100;
+        var curr_img = new Image();
+        for (var i=0; i<imageList.length; i++){
+          curr_img.src = imageList[i];
+          var rat = calculateAspectRatioFit(curr_img.width, curr_img.height, 2000, 500);
+          if (curr_img.width > maxwid){
+            maxwid = rat.width;
+          }
+        }
+        var imgdiv = document.getElementById("image_div");
+        imgdiv.style.width = (maxwid+"px");
+      }
+  </script>
+  </head>
+
+  <body>
+    <div class="content">
+      <div>    
+        <h1><a href ="/">ALICIA IOTT</a></h1>
+        <iframe src="sidebar.html" seamless="seamless" scrolling="no"></iframe>
+      </div>  
+
+      <div class="images" id="image_div">
+        <img src="http://i.imgur.com/i2AL3Wv.png" alt="" id="clickImage">
+      </div>
+
+      <div class="descrip">
+        <div class="buttons">
+          <button type="button" onclick="fadeBack()"> < </button>
+          <p id="whichImage" class="wi">1 / 2</p>
+          <button type="button" onclick="fadeNext()"> > </button>
+        </div>
+        <div class="imagedes">
+          <p class = "about">
+          <i>My President, 2016</i><br>
+          </p>
+
+          <p class = "about">I came up with this concept a few days after the 2016 US Presidential election. I was inspired by social media platforms, like twitter, which aim to give the common citizen a voice. After reading dozens of #NotMyPresident tweets, I wondered what it would be like if democracy had been effective in providing a voice for the populus. I wanted to allow people to see a president that had the same thoughts and values as themselves. With the help of Anna Schulz and Hizal Celik, this project was implemented as a sort of speculative design art work. Here are the full <a href="http://hizalcelik.com/dev/notmypres/buzzfeed.html">Buzzfeed website mockup</a> and <a href="http://hizalcelik.com/dev/notmypres/creators.html">Creators Project website.</a></p>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
