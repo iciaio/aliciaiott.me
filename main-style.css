@@ -14,7 +14,7 @@ a:hover {
 }
 
 a:active {
-  color: #0000ff;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -101,7 +101,7 @@ div.buttons {
 }
 
 button {
-  font-size: 2em;
+  font-size: 5em;
   background-color: transparent;
   border:none;
 }
