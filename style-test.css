@@ -1,5 +1,5 @@
 a:link {
-  color: #0000ff;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -44,12 +44,21 @@ h1 {
   padding-top: 2em;
 }
 
+div.scrollable {
+  height: 100%;
+  width: 315px;
+  overflow: hidden;
+  float:left;
+}
+
 iframe {
   border:0;
-  height: 700px;
+  height: 350px;
   width: 300px;
   float: left;
   padding-left: 2em;
+  padding-right: 15px;
+  overflow: scroll;
 }
 
 div.main {
@@ -59,7 +68,8 @@ div.main {
 }
 
 img {
-  padding-top: 0em;
+  max-width: 500px;
+  padding-top: 2em;
   float:right;
   height: 500px;
   vertical-align: middle;
@@ -67,28 +77,35 @@ img {
 
 div.content{
   float:left;
-  width:2000px;
+  width:1000px;
   height:550px;
 }
 
+div.scrollable-img{
+  width: 515px;
+  overflow: hidden;
+  float:left;
+}
+
 div.images {
-/*  width: 40%; */
+  width: 500px; 
   float: left;
-  padding-top: 0em;
-  padding-bottom: 0em;
+  padding-left: 350px;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 div.descrip {
   display:inline;
   float:left;
   height: 500px;
-  width:500px;
+  width: 500px;
   position:relative;
 }
 
 div.imagedes {
   overflow: hidden;
-  padding-left: 2em;
+  padding-left: 900px;
   position:absolute;
   bottom: 0;
 }
