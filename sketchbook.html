@@ -1,86 +1,43 @@
  
 <html>
   <head>
-<head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="main-style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Sketchbook</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="change-image.js"></script>
-    <script language="javascript">
-      var l1 = "http://i.imgur.com/Bllj1SO.jpg";
-      var l2 = "http://i.imgur.com/Uhusnpj.jpg";
-      var l3 = "http://i.imgur.com/qCG72Qd.jpg";
-      var l4 = "http://i.imgur.com/ceiAwPh.jpg";
-      var l5 = "http://i.imgur.com/cyr1jij.jpg";
-      //var l6 = "";
-      var l7 = "http://i.imgur.com/gsaDarS.jpg";
-      var l8 = "http://i.imgur.com/RWkD2ye.jpg";
-      var l9 = "http://i.imgur.com/vBQ09wd.jpg";
-      var l10 = "http://i.imgur.com/sUw0dwJ.jpg?1";
-      var l11 = "http://i.imgur.com/OKP47IZ.jpg?1";
-      var l12 = "http://i.imgur.com/0JsjUBo.jpg?1";
-      var l13 = "http://i.imgur.com/EbdDTY6.jpg?1";
-      var l14 = "http://i.imgur.com/37Lk5rX.jpg?1";
-      var l15 = "http://i.imgur.com/JRfW6Dw.jpg?1";
-      var imageList = [l1, l2, l3, l4, l5, l7, l8, l9, l10, l11, l12, l13, l14, l15];
-      var imageCounter = document.getElementById("whichImage");
-      
-      function fadeNext(){
-        $("#clickImage").fadeOut(700,function(){goNext(imageList, document.getElementById("clickImage"), whichImage)});
-        $("#clickImage").fadeIn(700)
-      }
-
-      function fadeBack(){
-        $("#clickImage").fadeOut(700,function(){goBack(imageList, document.getElementById("clickImage"), whichImage)});
-        $("#clickImage").fadeIn(700)
-      }
-
-      function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
-        var ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
-        return { width: srcWidth*ratio, height: srcHeight*ratio };
-      }
-
-      window.onload = function(){
-        var maxwid = 100;
-        var curr_img = new Image();
-        for (var i=0; i<imageList.length; i++){
-          curr_img.src = imageList[i];
-          var rat = calculateAspectRatioFit(curr_img.width, curr_img.height, 2000, 500);
-          if (curr_img.width > maxwid){
-            maxwid = rat.width;
-          }
-        }
-        var imgdiv = document.getElementById("image_div");
-        imgdiv.style.width = (maxwid+"px");
-      }
-  </script>
-
   </head>
 
-  <body>
-    <div class="content">
-      <div>    
+    <body style="overflow: hidden;">
+    <div class="side">
+      <div class="scrolling-iframe">  
         <h1><a href ="/">ALICIA IOTT</a></h1>
-        <iframe src="sidebar.html" seamless="seamless" scrolling="no"></iframe>
-      </div>  
-
-      <div class="images" id="image_div">
-        <img alt="" id="clickImage" src="http://i.imgur.com/Bllj1SO.jpg">
+        <iframe src="sidebar.html" seamless="seamless" scrolling="yes"></iframe>
       </div>
-
-      <div class="descrip">
-        <div class="buttons">
-        <button type="button" onclick="fadeBack()"> < </button>
-        <p id="whichImage" class="wi">1 / 14</p>
-        <button type="button" onclick="fadeNext()"> > </button>
-        </div>
-        <div class="imagedes">
-          <p class = "about">
+    </div>
+    <div class="photo-scroll">
+      <div class="photo-content">
+        <img src="http://i.imgur.com/Bllj1SO.jpg"><br>
+        <img src="http://i.imgur.com/Uhusnpj.jpg"><br>
+        <img src="http://i.imgur.com/qCG72Qd.jpg"><br>
+        <img src="http://i.imgur.com/ceiAwPh.jpg"><br>
+        <img src="http://i.imgur.com/cyr1jij.jpg"><br>
+        <img src="http://i.imgur.com/gsaDarS.jpg"><br>
+        <img src="http://i.imgur.com/RWkD2ye.jpg"><br>
+        <img src="http://i.imgur.com/vBQ09wd.jpg"><br>
+        <img src="http://i.imgur.com/sUw0dwJ.jpg?1" width="500px"><br>
+        <img src="http://i.imgur.com/OKP47IZ.jpg?1" width="500px"><br>
+        <img src="http://i.imgur.com/0JsjUBo.jpg?1" width="500px"><br>
+        <img src="http://i.imgur.com/EbdDTY6.jpg?1" width="500px"><br>
+        <img src="http://i.imgur.com/37Lk5rX.jpg?1" width="500px"><br>
+        <img src="http://i.imgur.com/JRfW6Dw.jpg?1" width="500px"><br>
+      </div>
+    </div>
+    <div class="word-content">
+      <div class="description">
+        <p class = "about">
             <em>2013-2014</em><br>
-          </p>
-            <p class="about">Here are the most notable and recent excerpts from my sketchbooks. I mainly used my sketchbooks to doodle, work out ideas, take notes, and study objects for larger works.</p>
-          </p>
+        </p>
+          <p class="about">Here are a few excerpts from my sketchbooks. I mainly used my sketchbooks to doodle, work out ideas, take notes, and study objects for larger works.</p>
+        </p>
         </div>
       </div>
     </div>

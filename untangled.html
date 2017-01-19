@@ -1,70 +1,28 @@
 <html>
-  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#">
+  <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="main-style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="change-image.js"></script>
     <title>Untangled</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script language="javascript">
-      var l1 = "http://cmuems.com/2016/60212/wp-content/uploads/2016/09/output_aYLTN3.gif"
-      var l2 = "http://cmuems.com/2016/60212/wp-content/uploads/2016/09/Plotter-Documentation-2.jpg";
-      var l3 = "http://i.imgur.com/e9ImGxi.jpg";
-      var l4 = "http://i.imgur.com/ewOiWUg.jpg";
-
-      
-      var imageList = [l1, l2, l3, l4];
-      var imageCounter = document.getElementById("whichImage");
-      
-      function fadeNext(){
-        $("#clickImage").fadeOut(700,function(){goNext(imageList, document.getElementById("clickImage"), whichImage)});
-        $("#clickImage").fadeIn(700)
-      }
-
-      function fadeBack(){
-        $("#clickImage").fadeOut(700,function(){goBack(imageList, document.getElementById("clickImage"), whichImage)});
-        $("#clickImage").fadeIn(700)
-      }
-      
-      function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
-        var ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
-        return { width: srcWidth*ratio, height: srcHeight*ratio };
-      }
-
-      window.onload = function(){
-        var maxwid = 100;
-        var curr_img = new Image();
-        for (var i=0; i<imageList.length; i++){
-          curr_img.src = imageList[i];
-          var rat = calculateAspectRatioFit(curr_img.width, curr_img.height, 2000, 500);
-          if (curr_img.width > maxwid){
-            maxwid = rat.width;
-          }
-        }
-        var imgdiv = document.getElementById("image_div");
-        imgdiv.style.width = (maxwid+"px");
-      }
-      
-    </script>
-
   </head>
-  <body>
-    <div class="content">
-      <div>    
+
+    <body style="overflow: hidden;">
+    <div class="side">
+      <div class="scrolling-iframe">  
         <h1><a href ="/">ALICIA IOTT</a></h1>
-        <iframe src="sidebar.html" seamless="seamless" scrolling="no"></iframe>
-      </div> 
-
-      <div class="images" id="image_div">
-        <img src="http://cmuems.com/2016/60212/wp-content/uploads/2016/09/output_aYLTN3.gif" alt="" id="clickImage">
-      </div>  
-
-      <div class="descrip">
-        <div class="buttons">
-          <button type="button" onclick="fadeBack()"> < </button>
-          <p id="whichImage" class="wi">1 / 4</p>
-          <button type="button" onclick="fadeNext()"> > </button>
-        </div>
-        <div class="imagedes">
+        <iframe src="sidebar.html" seamless="seamless" scrolling="yes"></iframe>
+      </div>
+    </div>
+    <div class="photo-scroll">
+      <div class="photo-content">
+        <img src="http://cmuems.com/2016/60212/wp-content/uploads/2016/09/output_aYLTN3.gif" style="padding-right : 2.5em;"><br>
+        <img src="http://cmuems.com/2016/60212/wp-content/uploads/2016/09/Plotter-Documentation-2.jpg" style="padding-right : 2.5em;"><br>
+        <img src="http://i.imgur.com/e9ImGxi.jpg" style="padding-right : 2.5em;"><br>
+        <img src="http://i.imgur.com/ewOiWUg.jpg" style="padding-right : 2.5em;"><br>
+      </div>
+    </div>
+    <div class="word-content">
+      <div class="description">
           <p class="about"><em>Fall 2016</em> Untangled</p>
           <p class="about"> I used processing to explore generative motion and lines. I used the Axi draw to plot my drawing.</p>
         </div>

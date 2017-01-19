@@ -1,68 +1,26 @@
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="main-style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8">
     <title>Selfless</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="change-image.js"></script>
-    <script language="javascript">
-      var l1 = "http://i.imgur.com/2SpnhB8.jpg";
-      var l2 = "http://i.imgur.com/TJJHbWQ.jpg";
-
-      var imageList = [l1, l2];
-      var imageCounter = document.getElementById("whichImage");
-      
-      function fadeNext(){
-        $("#clickImage").fadeOut(700,function(){goNext(imageList, document.getElementById("clickImage"), whichImage)});
-        $("#clickImage").fadeIn(700)
-      }
-
-      function fadeBack(){
-        $("#clickImage").fadeOut(700,function(){goBack(imageList, document.getElementById("clickImage"), whichImage)});
-        $("#clickImage").fadeIn(700)
-      }
-
-      function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
-        var ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
-        return { width: srcWidth*ratio, height: srcHeight*ratio };
-      }
-
-      window.onload = function(){
-        var maxwid = 100;
-        var curr_img = new Image();
-        for (var i=0; i<imageList.length; i++){
-          curr_img.src = imageList[i];
-          var rat = calculateAspectRatioFit(curr_img.width, curr_img.height, 10000, 500);
-          if (curr_img.width > maxwid){
-            maxwid = rat.width;
-          }
-        }
-        var imgdiv = document.getElementById("image_div");
-        imgdiv.style.width = (maxwid+"px");
-      }
-
-    </script>
-
 </head>
 
-  <body>
-    <div class="content">
-      <div>    
+  <body style="overflow: hidden;">
+    <div class="side">
+      <div class="scrolling-iframe">  
         <h1><a href ="/">ALICIA IOTT</a></h1>
-        <iframe src="sidebar.html" seamless="seamless" scrolling="no"></iframe>
-      </div>  
-
-      <div class="images" id="image_div">
-        <img src="http://i.imgur.com/2SpnhB8.jpg" alt="" id="clickImage" onclick="changeImage()">
-      </div>  
-
-      <div class="descrip">
-        <div class="buttons">
-        <button type="button" onclick="fadeBack()"> < </button>
-        <p id="whichImage" class="wi">1 / 2</p>
-        <button type="button" onclick="fadeNext()"> > </button>
-        </div>
-        <div class="imagedes">
+        <iframe src="sidebar.html" seamless="seamless" scrolling="yes"></iframe>
+      </div>
+    </div>
+    <div class="photo-scroll">
+      <div class="photo-content">
+        <img src="http://i.imgur.com/2SpnhB8.jpg"><br>
+        <img src="http://i.imgur.com/TJJHbWQ.jpg"><br>
+      </div>
+    </div>
+    <div class="word-content">
+      <div class="description">
+        <p class="about"><em>2014-2015</em> Exoskeleton</p>
           <p class = "about">
             <i>2014</i></p>
 

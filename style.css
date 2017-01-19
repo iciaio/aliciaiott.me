@@ -36,74 +36,69 @@ a.ume{
   text-decoration: underline;
 }
 
+
+div.side{
+  width: 300px;
+  position: relative;
+}
+
 h1 {
-  width: 12em;
+  width: inherit;
   font-style: italic;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   padding-left: 2em;
   padding-top: 2em;
 }
 
+div.scrolling-iframe{
+  width: 315px;
+  overflow: hidden;
+  float:left;
+}
+
 iframe {
   border:0;
-  height: 700px;
+  height: 350px;
   width: 300px;
   float: left;
   padding-left: 2em;
 }
 
-div.main {
-  width: 50%;
-  float: left;
-  padding-top: 0em;
+div.photo-scroll{
+  width: 500px;
+  padding-top: 3em;
+  overflow-x: hidden;
+  float:left;
 }
 
-img {
-  padding-top: 0em;
+div.photo-content{
+  width: 550px;
+  height: 100%;
+  float:left;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  position: relative;
+  overflow: scroll;
+}
+
+img{
+  max-width: 500px;
+  padding-bottom: 4em;
   float:right;
-  height: 500px;
-  vertical-align: middle;
 }
 
-div.content{
+div.word-content{
+  width: 30%;
+  height: 90%;
   float:left;
-  width:2000px;
-  height:550px;
-}
-
-div.images {
-/*  width: 40%; */
-  float: left;
-  padding-top: 0em;
-  padding-bottom: 0em;
-}
-
-div.descrip {
-  display:inline;
-  float:left;
-  height: 500px;
-  width:500px;
-  position:relative;
-}
-
-div.imagedes {
+  position: relative;
   overflow: hidden;
-  padding-left: 2em;
-  position:absolute;
-  bottom: 0;
 }
 
-div.buttons {
-  padding-left: 1.5em;
-  padding-top: 0em;
-  width: 400px;
-  outline: 0;
-}
-
-button {
-  font-size: 3em;
-  background-color: transparent;
-  border:none;
+div.description{
+  padding-left: 3em;
+  position: absolute;
+  bottom:0; 
 }
 
 p.about {
@@ -114,13 +109,4 @@ p.about {
   padding-right: 3em;
   vertical-align: baseline;
   bottom: 0;
-}
-
-p.wi {
-  padding-top: 0.5em;
-  padding-right: 1em;
-  float: left;
-  font-size: .8em;
-  padding-left: .5em;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
