@@ -87,6 +87,14 @@ img{
   float:right;
 }
 
+div.word-content{
+  width: 30%;
+  height: 90%;
+  float:left;
+  position: relative;
+  overflow: hidden;
+}
+
 div.description{
   padding-left: 3em;
   position: absolute;
