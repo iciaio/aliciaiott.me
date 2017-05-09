@@ -50,6 +50,13 @@ h1 {
   padding-top: 2em;
 }
 
+h3 {
+  width: inherit;
+  font-style: italic;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  padding-top: 2em;
+}
+
 div.scrolling-iframe{
   width: 315px;
   overflow: hidden;
@@ -82,9 +89,10 @@ div.photo-content{
 }
 
 img{
-  max-width: 500px;
-  padding-bottom: 4em;
-  float:right;
+  max-width: 600px;
+  padding-bottom: 2em;
+  padding-bottom: 2em;
+  float:left;
 }
 
 div.description{
@@ -93,12 +101,21 @@ div.description{
   bottom:0; 
 }
 
+p {
+  float:left;
+  padding-right: 3em;
+  vertical-align: baseline;
+  bottom: 0;
+}
+
+
 p.about {
-  font-family: "Courier New", Courier, monospace;
-  font-size: .75em;
-  line-height: 2em;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: .8em;
+  line-height: 1.5em;
   text-align: left;
   padding-right: 3em;
   vertical-align: baseline;
   bottom: 0;
 }
+
