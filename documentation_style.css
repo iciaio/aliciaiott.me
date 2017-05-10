@@ -72,14 +72,14 @@ iframe {
 }
 
 div.photo-scroll{
-  width: 500px;
+  width: 600px;
   padding-top: 3em;
   overflow-x: hidden;
   float:left;
 }
 
 div.photo-content{
-  width: 550px;
+  width: 650px;
   height: 100%;
   float:left;
   padding-bottom: 2em;
