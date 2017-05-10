@@ -110,3 +110,13 @@ p.about {
   vertical-align: baseline;
   bottom: 0;
 }
+
+p.main_descrip {
+  font-family: "Courier New", Courier, monospace;
+  font-size: .8em;
+  line-height: 2em;
+  text-align: left;
+  padding-right: 3em;
+  vertical-align: baseline;
+  bottom: 0;
+}
