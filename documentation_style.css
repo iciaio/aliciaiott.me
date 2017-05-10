@@ -74,31 +74,25 @@ iframe {
 div.photo-scroll{
   width: 600px;
   padding-top: 3em;
-  overflow-x: hidden;
+  overflow: hidden;
   float:left;
 }
 
 div.photo-content{
-  width: 650px;
+  width: 615px;
   height: 100%;
   float:left;
   padding-bottom: 2em;
   padding-top: 2em;
   position: relative;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 img{
   max-width: 600px;
   padding-bottom: 2em;
-  padding-bottom: 2em;
+  padding-top: 2em;
   float:left;
-}
-
-div.description{
-  padding-left: 3em;
-  position: absolute;
-  bottom:0; 
 }
 
 p {
