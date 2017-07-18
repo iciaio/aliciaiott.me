@@ -1,0 +1,39 @@
+<head>
+	<script language="javascript" type="text/javascript" src="libraries/p5.js"></script>  
+    <script src="int_roto.js"></script>
+	<style type="text/css">
+		img{
+			max-width: 100%;
+			padding-bottom: 3em;
+		}
+		h1 {
+		  font-family: PT Sans Narrow;
+		  font-size: 24px;
+		  font-style: normal;
+		  font-variant: normal;
+		  font-weight: 500;
+		  line-height: 26.4px;
+		}
+
+		p {
+		  font-family: PT Sans Narrow;
+		  font-size: 14px;
+		  font-style: normal;
+		  font-variant: normal;
+		  font-weight: 400;
+		  line-height: 20px;
+		  padding-right: 40px;
+		}
+	</style>
+</head>
+<div class="interactiverotoscope">
+	<h1>Interactive Rotoscope 2017</h1>
+	<p>An rotoscoped subject who's position can be controlled by user input. Go ahead and click and drag on the drawing below!</p>
+	<p class="about">I filmed a friend as he spun around and drew over the photographs to create a time-based, rotoscoped film with the scanned drawings. I used OpenFrameworks and p5 to allow a viewer to click and drag to switch between frames. The result is that the user can "spin" the subject sort of as if he were in a virtual 3d space.</p>
+	<p>A signifiant motivation behind this project was to imbue an interactive, digital experience with a handmade quality.</p>
+	<div id="myContainer" style="padding-bottom:11em;"></div>
+	<script>
+	 var myp5 = new p5(int_roto, "myContainer");
+	</script>
+	</div>
+</div>

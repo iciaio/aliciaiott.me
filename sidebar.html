@@ -1,85 +1,55 @@
+<!doctype html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="test-style.css">
-  <script language="javascript">
-    function swap(targetId){
-      if (document.getElementById){
-        target = document.getElementById(targetId);
-        if (target.style.display == "none"){
-          target.style.display = "";
-        } else{
-          target.style.display = "none";
-        }  
-      }
-    }
-  </script>
+<title>Alicia Iott</title>
+
+<link href="style.css" rel="stylesheet">
+<script src="tagscript.js"></script>
+
+<!-- <link href="css/base.css" rel="stylesheet" media="handheld, screen"> -->
+<!-- <link href="css/desktop.css" rel="stylesheet" media="screen"> -->
+<!-- <link href="css/custom.css" rel="stylesheet" media="screen"> -->
+
 </head>
+
 <body>
-  <div class = "links">
-      <ul>
-        <li>
-          <a href="#" onclick="swap('2017links');return false;">2017</a>
-          <ul id="2017links" style="display: none;">
-            <li><a href="memoryrooms.html" target="_top">MEMORY ROOM</a></li>
-            <li><a href="interactive_rotoscope.html" target="_top">INTERACTIVE ROTOSCOPE</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#" onclick="swap('sectionOneLinks');return false;">2016</a>
-          <ul id="sectionOneLinks" style="display: none;">
-            <li><a href="thegirlsarehome.html" target="_top">THE GIRLS ARE HOME</a></li>
-            <li><a href="cutetome.html" target="_top">CUTE TO ME</a></li>
-            <li><a href="makeitrain.html" target="_top">MAKE IT RAIN</a></li>
-            <li><a href="untangled.html" target="_top">UNTANGLED</a></li>                      
-            <li><a href="tastycarb.html" target="_top">TASTY CARB</a></li>          
-            <li><a href="mypresident.html" target="_top">MY PRESIDENT</a></li>
-            <li><a href="dranimate.html" target="_top">DRANIMATE</a></li>
-            <li><a href="parforthecourse.html" target="_top">PAR FOR THE COURSE</a></li>
-            <li><a href="collabture.html" target="_top">COLLABTURE</a></li>            
-          </ul>
-        </li>
-        <li>
-          <a href="#" onclick="swap('sectionTwoLinks');return false;">2015</a>
-          <ul id="sectionTwoLinks" style="display: none;">
-            <li><a href="audionce.html" target="_top">AUDIONCE (GRAPHONIC)</a></li>
-            <li><a href="exoskeleton.html" target="_top">EXOSKELETON</a></li>
-            <li><a href="recollection.html" target="_top">RECOLLECTION</a></li>
-            <li><a href="escape.html" target="_top">ESCAPE (INFINITE ROOM GAME)</a></li>
-            <li><a href="littlered.html" target="_top">LITTLE RED</a></li>
-            <li><a href="rightfullyaccused.html" target="_top">RIGHTFULLY ACCUSED</a></li>
-            <li><a href="screenrage.html" target="_top">SCREEN RAGE</a></li>
-            <li><a href="deconstructuredrawings.html" target="_top">DECONSTRUCTURE</a></li>
-            <li><a href="figuredrawings.html" target="_top">FIGURE DRAWINGS</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#" onclick="swap('sectionThreeLinks');return false;">2014</a>
-          <ul id="sectionThreeLinks" style="display: none;">
-            <li><a href="teaparty.html" target="_top">TEA PARTY</a></li>
-            <li><a href="selfless.html" target="_top">SELFLESS</a></li>
-            <li><a href="oilstudies.html" target="_top">OIL STUDIES</a></li>
-            <li><a href="drawings.html" target="_top">DRAWINGS</a></li>
-            <li><a href="sketchbook.html" target="_top">SKETCHBOOK</a></li>
-            <li><a href = "photography.html" target="_top">PHOTOGRAPHY</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#" onclick="swap('sectionFourLinks');return false;">2013</a>
-          <ul id="sectionFourLinks" style="display: none;">
-            <li><a href="musiccatch.html" target="_top">MUSIC CATCH</a></li>
-          </ul>
-        </li>
-        <li><a href="https://drive.google.com/a/andrew.cmu.edu/file/d/0B2_7ym3q3txjcUZ3VnFnMm1ZUjA/view?usp=sharing" target="_top">RESUM&Eacute;</a></li>
-        <li>
-          <a href="#" onclick="swap('sectionFiveLinks');return false;">SOCIAL MEDIA</a>
-          <ul id="sectionFiveLinks" style="display: none;">
-            <li><a href="https://github.com/iciaio" target="_top">GITHUB</a></li>
-            <li><a href="https://twitter.com/iciaiot" target="_top">TWITTER</a></li>
-            <li><a href="https://www.facebook.com/alicia.iott" target="_top">FACEBOOK</a></li>
-            <li><a href="https://www.instagram.com/iciaiot/" target="_top">INSTAGRAM</a></li>
-          </ul>
-        </li>
-      </ul>
-  </div>  
+  <div class="leftPanel">
+    <div class="alicia">
+      <img src="images/alicia.jpeg" alt="alicia">
+    </div>
+    <div class="links">
+      <img src="images/projects.png" alt="resume" height="25px">
+      <img src="images/slash.png" alt="resume" height="25px">
+      <img src="images/about.png" alt="resume" height="25px">
+      <img src="images/slash.png" alt="resume" height="25px">
+      <a href = "resume.html">
+        <img src="images/resume.png" alt="resume" height="25px">
+      </a>
+    </div>
+    <div class="tags">
+      <img id="2d" src="images/2d.png" height="25px" onclick="toggle(this.id)">
+      <img id="3d" src="images/3d.png" height="25px" onclick="toggle(this.id)">
+      <img id="interactive" src="images/interactive.png" height="25px" onclick="toggle(this.id)">
+      <img id="unity" src="images/unity.png" height="25px" onclick="toggle(this.id)">
+      <img id="maya" src="images/maya.png" height="25px" onclick="toggle(this.id)">
+      <img id="ink" src="images/ink.png" height="25px" onclick="toggle(this.id)">
+      <img id="drawing" src="images/drawing.png" height="25px" onclick="toggle(this.id)">
+    </div>
+    <div class="scroll">
+      <div class="taggedcontent">
+        <img id="memoryroom" 
+              class="ink drawing unity 3d maya" 
+              src="images/memoryroom.png" 
+              style="width:100%; margin-bottom:1em; display:block;"
+              onclick="displayPage(id)">
+        <img id="interactiverotoscope" 
+              class="ink drawing interactive 2d" 
+              src="images/interactiveroto.png" 
+              style="width:100%; margin-bottom:1em; display:block;"
+              onclick="displayPage(id)">
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
