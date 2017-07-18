@@ -22,25 +22,6 @@ tags["design"] = 0;
 tags["vr"] = 0; 
 tags["oculus"] = 0; 
 tags["photography"] = 0; 
-
-
-window.onload = function setup(){
-  for (var id in tags){
-    var button = document.getElementById(id);
-    var projects = document.getElementsByClassName(id);
-    var grey = "tags/" + id +".png";
-    var black = "tags/" + id +"_sel.png";
-
-    if (tags[id] == 1){// "active--->inactive"
-      button.src = black;
-      show(projects);
-    } else { //"inactive--->active"
-      button.src = grey;
-      hide(projects, id);
-    }
-  }
-}
-
 function toggle(id){
 
   //document.getElementsByClassName(id) : gets the projects which are labeled with that class id
