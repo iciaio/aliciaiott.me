@@ -16,7 +16,7 @@
             images[i].src = preload.arguments[i]
           }
         }
-        preload(
+        document.onload = preload(
           "icons/memoryroomtitle_icon.png",
           "icons/memoryroom_icon.png",
           "icons/thegirlsarehometitle_icon.png",
@@ -57,7 +57,7 @@
           "icons/oiltitle_icon.png",
           "icons/photography_icon.png",
           "icons/photographytitle_icon.png"
-        )
+        );
       </script>
     </div>
     <div class="leftPanel">
