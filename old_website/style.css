@@ -1,0 +1,120 @@
+a:link {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:active {
+  color: #000000;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  font-size: .8em;
+  padding-left: 2.6em;
+}
+
+li {
+  padding: .6em;
+}
+
+a {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+a.ume{
+  text-decoration: underline;
+}
+
+
+div.side{
+  width: 300px;
+  position: relative;
+}
+
+h1 {
+  width: inherit;
+  font-style: italic;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  padding-left: 2em;
+  padding-top: 2em;
+}
+
+div.scrolling-iframe{
+  width: 315px;
+  overflow: hidden;
+  float:left;
+}
+
+iframe {
+  border:0;
+  height: 350px;
+  width: 300px;
+  float: left;
+  padding-left: 2em;
+}
+
+div.photo-scroll{
+  width: 500px;
+  padding-top: 0em;
+  overflow-x: hidden;
+  float:left;
+}
+
+div.photo-content{
+  width: 550px;
+  height: 100%;
+  float:left;
+  padding-top: 5em;
+  overflow: scroll;
+}
+
+img{
+  max-width: 500px;
+  padding-bottom: 4em;
+  float:right;
+}
+
+div.word-content{
+  width: 30%;
+  height: 90%;
+  float:left;
+  position: relative;
+  overflow: hidden;
+}
+
+div.description{
+  padding-left: 3em;
+  position: absolute;
+  bottom:0; 
+}
+
+p.about {
+  font-family: "Courier New", Courier, monospace;
+  font-size: .75em;
+  line-height: 2em;
+  text-align: left;
+  padding-right: 3em;
+  vertical-align: baseline;
+  bottom: 0;
+}
+
+p.main_descrip {
+  font-family: "Courier New", Courier, monospace;
+  font-size: .8em;
+  line-height: 2em;
+  text-align: left;
+  padding-right: 3em;
+  vertical-align: baseline;
+  bottom: 0;
+}
