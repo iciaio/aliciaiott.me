@@ -50,6 +50,13 @@ h1 {
   padding-top: 2em;
 }
 
+h3 {
+  width: inherit;
+  font-style: italic;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  padding-top: 2em;
+}
+
 div.scrolling-iframe{
   width: 315px;
   overflow: hidden;
@@ -65,56 +72,46 @@ iframe {
 }
 
 div.photo-scroll{
-  width: 500px;
-  padding-top: 0em;
-  overflow-x: hidden;
+  width: 600px;
+  padding-top: 3em;
+  overflow: hidden;
   float:left;
 }
 
 div.photo-content{
-  width: 550px;
+  width: 615px;
   height: 100%;
   float:left;
-  padding-top: 5em;
-  overflow: scroll;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  position: relative;
+  overflow-y: scroll;
 }
 
 img{
-  max-width: 500px;
-  padding-bottom: 4em;
-  float:right;
-}
-
-div.word-content{
-  width: 30%;
-  height: 90%;
+  max-width: 600px;
+  padding-bottom: 2em;
+  padding-top: 2em;
   float:left;
-  position: relative;
-  overflow: hidden;
 }
 
-div.description{
-  padding-left: 3em;
-  position: absolute;
-  bottom:0; 
+p {
+  float:left;
+  padding-right: 3em;
+  padding-left: 1em;
+  vertical-align: baseline;
+  bottom: 0;
 }
+
 
 p.about {
-  font-family: "Courier New", Courier, monospace;
-  font-size: .75em;
-  line-height: 2em;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: .8em;
+  line-height: 1.5em;
   text-align: left;
   padding-right: 3em;
+  padding-left: 0em;
   vertical-align: baseline;
   bottom: 0;
 }
 
-p.main_descrip {
-  font-family: "Courier New", Courier, monospace;
-  font-size: .8em;
-  line-height: 2em;
-  text-align: left;
-  padding-right: 3em;
-  vertical-align: baseline;
-  bottom: 0;
-}

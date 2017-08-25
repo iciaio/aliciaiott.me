@@ -66,7 +66,7 @@ iframe {
 
 div.photo-scroll{
   width: 500px;
-  padding-top: 0em;
+  padding-top: 3em;
   overflow-x: hidden;
   float:left;
 }
@@ -75,7 +75,9 @@ div.photo-content{
   width: 550px;
   height: 100%;
   float:left;
-  padding-top: 5em;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  position: relative;
   overflow: scroll;
 }
 
@@ -102,16 +104,6 @@ div.description{
 p.about {
   font-family: "Courier New", Courier, monospace;
   font-size: .75em;
-  line-height: 2em;
-  text-align: left;
-  padding-right: 3em;
-  vertical-align: baseline;
-  bottom: 0;
-}
-
-p.main_descrip {
-  font-family: "Courier New", Courier, monospace;
-  font-size: .8em;
   line-height: 2em;
   text-align: left;
   padding-right: 3em;

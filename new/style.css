@@ -1,0 +1,57 @@
+/* start sidebar */
+div.leftPanel{
+  /*background-color: green;*/
+  width: 400px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding:2em;
+}
+
+div.alicia{
+  text-align: right;
+}
+
+div.links{
+  text-align: right;
+}
+
+div.tags{
+  padding-top: 2em;
+  text-align: right;
+  padding-bottom:2em;
+}
+
+div.taggedcontent{
+  width: 725px;
+  height: 100%;
+  overflow: scroll;
+}
+
+div.scroll {
+  display:block;
+  width: 700px;
+  position:fixed;
+  bottom:-25px;
+  top:10px;
+  overflow: hidden;
+}
+
+/* end sidebar */
+
+iframe {
+  /*background-color: yellow;*/
+  border:0;
+  height: 100%;
+  width:100%;
+  overflow: scroll;
+}
+
+div.content{
+  /*background-color: red;*/
+  height: 100%;
+  position:absolute;
+  left:500px;
+  right:0;
+  overflow: hidden;
+}
