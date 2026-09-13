@@ -1,0 +1,98 @@
+/* ---------------------------------------------------------------
+   12-column responsive grid system
+   - .grid establishes a 12-column CSS Grid with a consistent gutter
+   - .col-span-N sizes an element to N of the 12 columns
+   - Breakpoints collapse to fewer effective columns on smaller screens
+   ----------------------------------------------------------------*/
+
+:root {
+  --grid-columns: 12;
+  --grid-gutter: 1.5rem;
+  --grid-margin: 2rem;
+  --sidebar-columns: 3;
+  --content-columns: 9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  gap: var(--grid-gutter);
+  padding: var(--grid-margin);
+  min-height: 100vh;
+  align-items: start;
+}
+
+.sidebar {
+  grid-column: span var(--sidebar-columns);
+  position: sticky;
+  top: var(--grid-margin);
+}
+
+.content {
+  grid-column: span var(--content-columns);
+  min-width: 0;
+}
+
+/* Utility col-span classes for building 12-col layouts within pages */
+.col-span-1 { grid-column: span 1; }
+.col-span-2 { grid-column: span 2; }
+.col-span-3 { grid-column: span 3; }
+.col-span-4 { grid-column: span 4; }
+.col-span-5 { grid-column: span 5; }
+.col-span-6 { grid-column: span 6; }
+.col-span-7 { grid-column: span 7; }
+.col-span-8 { grid-column: span 8; }
+.col-span-9 { grid-column: span 9; }
+.col-span-10 { grid-column: span 10; }
+.col-span-11 { grid-column: span 11; }
+.col-span-12 { grid-column: span 12; }
+
+/* Tablet: sidebar becomes a full-width top bar, content full width below */
+@media (max-width: 900px) {
+  :root {
+    --grid-gutter: 1rem;
+    --grid-margin: 1.25rem;
+  }
+
+  .app-shell {
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+  }
+
+  .sidebar {
+    grid-column: span var(--grid-columns);
+    position: static;
+  }
+
+  .content {
+    grid-column: span var(--grid-columns);
+  }
+}
+
+/* Mobile: tighter margins, single-column stacking for utility classes */
+@media (max-width: 600px) {
+  :root {
+    --grid-gutter: 0.75rem;
+    --grid-margin: 1rem;
+  }
+
+  [class*="col-span-"] {
+    grid-column: span var(--grid-columns);
+  }
+}
